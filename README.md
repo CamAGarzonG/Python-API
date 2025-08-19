@@ -18,4 +18,4 @@ pytest --html=report.html
 
 # 🛒 Visualizaciob ejecucion
 
-![API Tests](https://github.com/CamAGarzonG/Python-API/actions/workflows/tests.yml/badge.svg)
+![API Tests](https://github.com/CamAGarzonG/Python-API/actions/workflows/tests.yml/badge.svg?branch=master)
