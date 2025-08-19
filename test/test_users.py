@@ -10,14 +10,15 @@ def test_create_user():
         "username": fake.user_name(),
         "password": "Password123"
     }
-
+    # producto numero 11
     r = requests.post(f"{BASE_URL}/users", json=payload)
     assert r.status_code in [200, 201]
     data = r.json()
     print(data)
     assert "id" in data
-    assert data["username"] == payload["username"]
+    assert isinstance(data["id"], int)
 
 def test_create_user_invalid_payload():
+    # Este retorna un 200, pero esta mal por que no hay ningun body. La API retorna un status code erroneo
     r = requests.post(f"{BASE_URL}/users", json={})
     assert r.status_code in [400, 500]

@@ -9,6 +9,7 @@ def test_get_user_cart():
     assert isinstance(data, list)
 
 def test_delete_cart_invalid():
+    # Este retorna un 200, pero esta mal por que ese producto no existe. La API retorna un status code erroneo
     r = requests.delete(f"{BASE_URL}/carts/9999")
     assert r.status_code in [404, 400]
 
